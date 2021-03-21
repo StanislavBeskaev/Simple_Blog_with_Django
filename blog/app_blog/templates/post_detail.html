@@ -1,0 +1,51 @@
+{% extends 'base_page.html' %}
+{% load i18n %}
+
+{% block title %} {{ post.post_title }} {% endblock title %}
+
+{% block content %}
+<header class="header">
+    <ul class="header-list">
+        {% if request.user.is_authenticated %}
+        <li>
+            <span class="header__welcome"> {% trans 'Welcome to the site' %}, {{request.user.username}} </span>
+        </li>
+        <li>
+            <a href="{% url 'post_list' %}" class="header__link">{% trans 'To the posts list' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'account' %}" class="header__link">{% trans 'User information' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'logout' %}" class="header__link">{% trans 'Logout' %}</a>
+        </li>
+
+{% else %}
+        <li>
+            <span class="header__welcome">{% trans 'You are logged in as an unauthorized user' %}</span>
+        </li>
+        <li>
+            <a href="{% url 'post_list' %}" class="header__link">{% trans 'To the posts list' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'login' %}" class="header__link">{% trans 'Login' %}</a>
+        </li>
+ {% endif %}
+    </ul>
+</header>
+
+<h1>{{ post.post_title }}</h1>
+{% if post.post_author.profile.avatar_image_file %}
+<img src="{{ avatar_path }}" alt="{% trans 'Avatar' %}" class="avatar-image">
+{% endif %}
+<p> {{ post.post_author }}, {{ post.publication_date }} </p>
+
+<p>{{ post.post_content}}</p>
+{% if post_images %}
+    {% for image in post_images %}
+    <a href="{{ image.image_path}}" target="_blank"><img src="{{ image.image_path}}" class="post-image"></a>
+    {% endfor %}
+{% endif %}
+
+
+{% endblock content %}

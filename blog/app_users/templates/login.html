@@ -1,0 +1,17 @@
+{% extends "base_page.html" %}
+{% load i18n %}
+
+{% block title %} {% trans 'Login page' %} {% endblock title%}
+
+{% block content %}
+<h2>{% trans 'Enter your credentials' %}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">{% trans 'Login' %}</button>
+</form>
+
+<h3>{% trans "Don't have an account?" %}</h3>
+<a href="{% url 'register' %}" class="page-link">{% trans 'Register now' %}</a>
+
+{% endblock content%}

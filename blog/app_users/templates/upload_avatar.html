@@ -1,0 +1,40 @@
+{% extends "base_page.html" %}
+{% load i18n %}
+
+{% block title %} {% trans 'Uploading an avatar' %} {% endblock title%}
+
+{% block content %}
+
+<header class="header">
+    <ul class="header-list">
+
+        <li>
+            <span class="header__welcome"> {% trans 'Welcome to the site' %}, {{request.user.username}} </span>
+        </li>
+        <li>
+            <a href="{% url 'post_list' %}" class="header__link">{% trans 'To the posts list' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'account' %}" class="header__link">{% trans 'User information' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'edit_account' %}" class="header__link">{% trans 'Edit user information' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'logout' %}" class="header__link">{% trans 'Logout' %}</a>
+        </li>
+    </ul>
+</header>
+
+<h1>{% trans 'Uploading an avatar' %}</h1>
+
+<form method="post" enctype="multipart/form-data" class="upload-avatar-form">
+    {% csrf_token %}
+    {{ edit_form.as_p }}
+    <button type="submit" class="btn">{% trans 'Load' %}</button>
+</form>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+
+{% endblock content%}

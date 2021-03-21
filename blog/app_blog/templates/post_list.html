@@ -1,0 +1,58 @@
+{% extends 'base_page.html' %}
+{% load i18n %}
+
+{% block title %} {% trans 'Blog posts list' %} {% endblock title %}
+
+{% block content %}
+
+<header class="header">
+    <ul class="header-list">
+    {% if request.user.is_authenticated %}
+        <li>
+            <span class="header__welcome"> {% trans 'Welcome to the site' %}, {{request.user.username}} </span>
+        </li>
+        <li>
+            <a href="{% url 'account' %}" class="header__link">{% trans 'User information' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'create_post' %}" class="header__link">{% trans 'Create post' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'create_posts_from_file' %}" class="header__link">{% trans 'Creating posts from a file' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'logout' %}" class="header__link">{% trans 'Logout' %}</a>
+        </li>
+
+{% else %}
+        <li>
+            <span class="header__welcome">{% trans 'You are logged in as an unauthorized user' %}</span>
+        </li>
+        <li>
+            <a href="{% url 'login' %}" class="header__link">{% trans 'Login' %}</a>
+        </li>
+    </ul>
+{% endif %}
+</header>
+
+{% if post_list %}
+    <h2>{% trans 'Blog posts list' %}</h2>
+    <ul class="post-list">
+        {% for post in post_list %}
+        <a href="{% url 'post_detail' post.id  %}" class="post-link post-card">
+            <li >
+                <h3 class="post-card__header">{{post.post_title}}</h3>
+                <p class="post-card__content">{{ post.short_content }}</p>
+                <div class="post-card__date">{{post.publication_date}} </div>
+                <div class="post-card__author">{{ post.post_author }}</div>
+            </li>
+        </a>
+
+    {% endfor %}
+    </ul>
+
+{% else %}
+<h2>{% trans 'There are no posts' %}!</h2>
+{% endif %}
+
+{% endblock content %}

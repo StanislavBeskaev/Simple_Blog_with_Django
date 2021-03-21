@@ -1,0 +1,38 @@
+{% extends "base_page.html" %}
+{% load i18n %}
+
+{% block title %} {% trans 'Editing user information' %} {% endblock title%}
+
+{% block content %}
+
+<header class="header">
+    <ul class="header-list">
+
+        <li>
+            <span class="header__welcome"> {% trans 'Welcome to the site' %}, {{request.user.username}} </span>
+        </li>
+        <li>
+            <a href="{% url 'post_list' %}" class="header__link">{% trans 'To the posts list' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'account' %}" class="header__link">{% trans 'User information' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'upload_avatar' %}" class="header__link">{% trans 'Upload avatar' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'logout' %}" class="header__link">{% trans 'Logout' %}</a>
+        </li>
+    </ul>
+</header>
+
+<h1>{% trans 'Editing user information' %}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ edit_form.as_p }}
+    <button type="submit" class="btn">{% trans 'Change' %}</button>
+</form>
+<p>{{ message }}</p>
+
+{% endblock content%}

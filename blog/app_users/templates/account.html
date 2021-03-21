@@ -1,0 +1,40 @@
+{% extends "base_page.html" %}
+{% load i18n %}
+
+{% block title %} {% trans 'User information' %} {% endblock title%}
+
+{% block content %}
+
+<header class="header">
+    <ul class="header-list">
+
+        <li>
+            <span class="header__welcome"> {% trans 'Welcome to the site' %}, {{request.user.username}} </span>
+        </li>
+        <li>
+            <a href="{% url 'post_list' %}" class="header__link">{% trans 'To the posts list' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'edit_account' %}" class="header__link">{% trans 'Edit user information' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'upload_avatar' %}" class="header__link">{% trans 'Upload avatar' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'logout' %}" class="header__link">{% trans 'Logout' %}</a>
+        </li>
+    </ul>
+</header>
+
+<h1>{% trans 'User information' %}</h1>
+<ul>
+    <li> {% trans 'Username' %}: {{ request.user.username }} </li>
+    <li> {% trans 'E-mail address' %}: {{ request.user.email }} </li>
+    <li> {% trans 'First name' %}: {{ request.user.first_name }} </li>
+    <li> {% trans 'Second name' %}: {{ request.user.last_name }} </li>
+</ul>
+{% if request.user.profile.avatar_image_file %}
+{% trans 'Avatar' %}: <img src="{{ avatar_path }}" alt="{% trans 'Avatar' %}" class="avatar-image">
+{% endif %}
+
+{% endblock content%}

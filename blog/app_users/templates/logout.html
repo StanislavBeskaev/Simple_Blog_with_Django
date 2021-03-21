@@ -1,0 +1,10 @@
+{% extends "base_page.html" %}
+{% load i18n %}
+
+{% block title %} {% trans 'Logout page' %} {% endblock title%}
+
+{% block content %}
+<h3>{% trans 'You are logged out' %}</h3>
+<a href="{% url 'post_list' %}" class="page-link">{% trans 'To the posts list' %}</a>
+
+{% endblock content%}

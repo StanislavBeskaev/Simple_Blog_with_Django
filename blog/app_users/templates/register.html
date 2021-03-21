@@ -1,0 +1,16 @@
+{% extends "base_page.html" %}
+{% load i18n %}
+
+{% block title %} {% trans 'Registration page' %} {% endblock title%}
+
+{% block content %}
+<h2>{% trans 'Registration in the system' %}</h2>
+<form method="post" class="register-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">{% trans 'Registration' %}</button>
+</form>
+
+<a href="{% url 'post_list' %}" class="page-link">{% trans 'To the posts list' %}</a>
+
+{% endblock content%}

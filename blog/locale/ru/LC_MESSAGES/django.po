@@ -1,0 +1,397 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-14 17:59+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\app_blog\apps.py:7
+msgid "blog"
+msgstr "блог"
+
+#: .\app_blog\forms.py:7
+msgid "No more than"
+msgstr "Не более чем"
+
+#: .\app_blog\forms.py:8
+msgid "characters"
+msgstr "символов"
+
+#: .\app_blog\forms.py:11
+msgid "One post = one line. Line format: (Title)"
+msgstr "Один пост = одна строка. Формат строки:<Заголовок>"
+
+#: .\app_blog\forms.py:12
+msgid "(Content)"
+msgstr "<Содержание>"
+
+#: .\app_blog\forms.py:13
+msgid "(Publication date). Publication date in the format hh:mi:ss dd.mm.yyyy"
+msgstr "<Дата публикации>. Дата публикации в формате hh:mi:ss dd.mm.yyyy"
+
+#: .\app_blog\forms.py:18 .\app_blog\models.py:10
+msgid "Post title"
+msgstr "Заголовок поста"
+
+#: .\app_blog\forms.py:18
+msgid "No more than 70 characters"
+msgstr "Не более 70 символов"
+
+#: .\app_blog\forms.py:20 .\app_blog\models.py:11
+msgid "Post content"
+msgstr "Содержание поста"
+
+#: .\app_blog\forms.py:22
+msgid "Images"
+msgstr "Изображения для поста"
+
+#: .\app_blog\forms.py:28
+msgid "Post List File"
+msgstr "Файл со списком постов"
+
+#: .\app_blog\models.py:8
+msgid "Post author"
+msgstr "Автор поста"
+
+#: .\app_blog\models.py:9
+msgid "Post publication date"
+msgstr "Дата публикации поста"
+
+#: .\app_blog\models.py:17
+msgid "post"
+msgstr "пост"
+
+#: .\app_blog\models.py:18
+msgid "posts"
+msgstr "посты"
+
+#: .\app_blog\services\post_services.py:103
+#, python-format
+msgid "The file was processed successfully. Posted by %(post_counter)s posts"
+msgstr "Файл успешно обработан. Опубликовано %(post_counter)s постов"
+
+#: .\app_blog\services\post_services.py:106
+#, python-format
+msgid ""
+"Posts not created. Error reading file. The file must be text, the delimiter "
+"of values is %(delimiter)s"
+msgstr "Посты не созданы. Ошибка чтения файла. Файл должен быть текстовый, разделитель значений %(delimiter)s"
+
+#: .\app_blog\services\post_services.py:109
+#, python-format
+msgid ""
+"No posts have been created. Not all values are specified in line %(line)s"
+msgstr "Посты не созданы. В строке %(line)s указаны не все значения"
+
+#: .\app_blog\services\post_services.py:112
+#, python-format
+msgid "No posts have been created. Incorrect date value in line %(line)s"
+msgstr "Посты не созданы. Не корретное значение даты в строке %(line)s"
+
+#: .\app_blog\services\post_services.py:115
+#, python-format
+msgid "No posts have been created. Empty post title value in line %(line)s"
+msgstr "Посты не созданы. Пустое значение заголовка поста в строке %(line)s"
+
+#: .\app_blog\services\post_services.py:118
+#, python-format
+msgid "No posts have been created. Empty post content value in line %(line)s"
+msgstr "Посты не созданы. Пустое значение содержимого поста в строке %(line)s"
+
+#: .\app_blog\services\post_services.py:121
+msgid "An unexpected error has occurred"
+msgstr "Произошла непредвиденная ошибка"
+
+#: .\app_blog\templates\create_post.html:3
+msgid "Creating a blog post"
+msgstr "Создание поста блога"
+
+#: .\app_blog\templates\create_post.html:10
+#: .\app_blog\templates\create_posts_from_file.html:11
+#: .\app_blog\templates\post_detail.html:11
+#: .\app_blog\templates\post_list.html:12
+#: .\app_blog\tests\tests_create_post_page.py:44
+#: .\app_blog\tests\tests_create_posts_from_file.py:45
+#: .\app_blog\tests\tests_post_detail.py:42
+#: .\app_blog\tests\tests_post_detail.py:53
+#: .\app_blog\tests\tests_post_list.py:61
+#: .\app_blog\tests\tests_post_list.py:74
+#: .\app_users\templates\account.html:12
+#: .\app_users\templates\edit_account.html:12
+#: .\app_users\templates\upload_avatar.html:12
+msgid "Welcome to the site"
+msgstr "Добро пожаловать на сайт"
+
+#: .\app_blog\templates\create_post.html:13
+#: .\app_blog\templates\create_posts_from_file.html:14
+#: .\app_blog\templates\post_detail.html:14
+#: .\app_blog\templates\post_detail.html:28
+#: .\app_blog\tests\tests_create_post_page.py:45
+#: .\app_blog\tests\tests_create_posts_from_file.py:46
+#: .\app_blog\tests\tests_post_detail.py:40
+#: .\app_blog\tests\tests_post_detail.py:51
+#: .\app_users\templates\account.html:15
+#: .\app_users\templates\edit_account.html:15
+#: .\app_users\templates\logout.html:8 .\app_users\templates\register.html:14
+#: .\app_users\templates\upload_avatar.html:15
+#: .\app_users\tests\tests_logout.py:23
+msgid "To the posts list"
+msgstr "К списку постов"
+
+#: .\app_blog\templates\create_post.html:16
+#: .\app_blog\templates\create_posts_from_file.html:17
+#: .\app_blog\templates\post_detail.html:17
+#: .\app_blog\templates\post_list.html:15
+#: .\app_blog\tests\tests_create_post_page.py:46
+#: .\app_blog\tests\tests_create_posts_from_file.py:47
+#: .\app_blog\tests\tests_post_detail.py:43
+#: .\app_blog\tests\tests_post_detail.py:54
+#: .\app_blog\tests\tests_post_list.py:62
+#: .\app_blog\tests\tests_post_list.py:75 .\app_users\templates\account.html:4
+#: .\app_users\templates\account.html:29
+#: .\app_users\templates\edit_account.html:18
+#: .\app_users\templates\upload_avatar.html:18
+msgid "User information"
+msgstr "Информация о пользователе"
+
+#: .\app_blog\templates\create_post.html:19
+#: .\app_blog\templates\create_posts_from_file.html:20
+#: .\app_blog\templates\post_detail.html:20
+#: .\app_blog\templates\post_list.html:24
+#: .\app_blog\tests\tests_create_post_page.py:47
+#: .\app_blog\tests\tests_create_posts_from_file.py:48
+#: .\app_blog\tests\tests_post_detail.py:55
+#: .\app_blog\tests\tests_post_list.py:65
+#: .\app_blog\tests\tests_post_list.py:78
+#: .\app_users\templates\account.html:24
+#: .\app_users\templates\edit_account.html:24
+#: .\app_users\templates\upload_avatar.html:24
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\app_blog\templates\create_post.html:24
+#: .\app_blog\templates\create_post.html:29
+#: .\app_blog\templates\post_list.html:18
+#: .\app_blog\tests\tests_create_post_page.py:53
+#: .\app_blog\tests\tests_post_list.py:63
+#: .\app_blog\tests\tests_post_list.py:76
+msgid "Create post"
+msgstr "Создать пост"
+
+#: .\app_blog\templates\create_posts_from_file.html:4
+#: .\app_blog\templates\create_posts_from_file.html:25
+#: .\app_blog\templates\post_list.html:21
+#: .\app_blog\tests\tests_create_posts_from_file.py:54
+#: .\app_blog\tests\tests_post_list.py:64
+#: .\app_blog\tests\tests_post_list.py:77
+msgid "Creating posts from a file"
+msgstr "Создание постов из файла"
+
+#: .\app_blog\templates\create_posts_from_file.html:30
+#: .\app_blog\tests\tests_create_posts_from_file.py:55
+msgid "Create posts"
+msgstr "Создать посты"
+
+#: .\app_blog\templates\post_detail.html:25
+#: .\app_blog\templates\post_list.html:29
+#: .\app_blog\tests\tests_post_detail.py:39
+#: .\app_blog\tests\tests_post_detail.py:50
+#: .\app_blog\tests\tests_post_list.py:59
+#: .\app_blog\tests\tests_post_list.py:72
+msgid "You are logged in as an unauthorized user"
+msgstr "Вы зашли как не авторизованный пользователь"
+
+#: .\app_blog\templates\post_detail.html:31
+#: .\app_blog\templates\post_list.html:32
+#: .\app_blog\tests\tests_post_detail.py:41
+#: .\app_blog\tests\tests_post_detail.py:52
+#: .\app_blog\tests\tests_post_list.py:60
+#: .\app_blog\tests\tests_post_list.py:73 .\app_users\templates\login.html:11
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\app_blog\templates\post_detail.html:39
+#: .\app_users\templates\account.html:37
+msgid "Avatar"
+msgstr "Аватарка"
+
+#: .\app_blog\templates\post_list.html:4
+#: .\app_blog\templates\post_list.html:39
+#: .\app_blog\tests\tests_post_list.py:36
+#: .\app_blog\tests\tests_post_list.py:49
+msgid "Blog posts list"
+msgstr "Список постов блога"
+
+#: .\app_blog\templates\post_list.html:55
+#: .\app_blog\tests\tests_post_list.py:30
+msgid "There are no posts"
+msgstr "Нет постов"
+
+#: .\app_blog\views.py:86
+msgid "Form is invalid"
+msgstr "Форма не валидна"
+
+#: .\app_media\apps.py:7
+msgid "media"
+msgstr "медиа файлы"
+
+#: .\app_media\models.py:9
+msgid "picture, user profile avatar"
+msgstr "картинка, аватар профиля пользователя"
+
+#: .\app_media\models.py:15
+msgid "profile avatar image"
+msgstr "изображение аватара профиля"
+
+#: .\app_media\models.py:16
+msgid "profile avatar images"
+msgstr "изображения аватара профиля"
+
+#: .\app_media\models.py:21
+msgid "Image for post"
+msgstr "Изображение для поста"
+
+#: .\app_media\models.py:22
+msgid "Post"
+msgstr "пост"
+
+#: .\app_media\models.py:25
+msgid "post image"
+msgstr "изображение поста"
+
+#: .\app_media\models.py:26
+msgid "post images"
+msgstr "изображения поста"
+
+#: .\app_users\apps.py:7
+msgid "users"
+msgstr "пользователи"
+
+#: .\app_users\forms.py:11 .\app_users\templates\account.html:33
+msgid "First name"
+msgstr "Имя"
+
+#: .\app_users\forms.py:12 .\app_users\templates\account.html:34
+msgid "Second name"
+msgstr "Фамилия"
+
+#: .\app_users\forms.py:13
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\app_users\models.py:10
+msgid "user"
+msgstr "пользователь"
+
+#: .\app_users\models.py:11
+msgid "user profile avatar"
+msgstr "картинка, аватар профиля пользователя"
+
+#: .\app_users\models.py:15
+msgid "profile"
+msgstr "профиль пользователя"
+
+#: .\app_users\models.py:16
+msgid "profiles"
+msgstr "профили пользователей"
+
+#: .\app_users\templates\account.html:18
+#: .\app_users\templates\upload_avatar.html:21
+msgid "Edit user information"
+msgstr "Редактирование данных пользователя"
+
+#: .\app_users\templates\account.html:21
+#: .\app_users\templates\edit_account.html:21
+msgid "Upload avatar"
+msgstr "Загрузить аватар"
+
+#: .\app_users\templates\account.html:31
+msgid "Username"
+msgstr "Имя польователя"
+
+#: .\app_users\templates\account.html:32
+msgid "E-mail address"
+msgstr "Адрес электронной почты"
+
+#: .\app_users\templates\edit_account.html:4
+#: .\app_users\templates\edit_account.html:29
+msgid "Editing user information"
+msgstr "Редактирование данных пользователя"
+
+#: .\app_users\templates\edit_account.html:34
+msgid "Change"
+msgstr "Изменить"
+
+#: .\app_users\templates\login.html:4
+msgid "Login page"
+msgstr "Страница авторизации"
+
+#: .\app_users\templates\login.html:7
+msgid "Enter your credentials"
+msgstr "Введите учётные данные"
+
+#: .\app_users\templates\login.html:14
+msgid "Don't have an account?"
+msgstr "Нет учётной записи?"
+
+#: .\app_users\templates\login.html:15
+msgid "Register now"
+msgstr "Зарегистрироваться"
+
+#: .\app_users\templates\logout.html:4
+msgid "Logout page"
+msgstr "Страница выхода"
+
+#: .\app_users\templates\logout.html:7 .\app_users\tests\tests_logout.py:22
+msgid "You are logged out"
+msgstr "Вы вышли из системы"
+
+#: .\app_users\templates\register.html:4
+msgid "Registration page"
+msgstr "Страница регистрации"
+
+#: .\app_users\templates\register.html:7
+msgid "Registration in the system"
+msgstr "Регистрация в системе"
+
+#: .\app_users\templates\register.html:11
+msgid "Registration"
+msgstr "Зарегистрироваться"
+
+#: .\app_users\templates\upload_avatar.html:4
+#: .\app_users\templates\upload_avatar.html:29
+msgid "Uploading an avatar"
+msgstr "Загрузить аватар"
+
+#: .\app_users\templates\upload_avatar.html:34
+msgid "Load"
+msgstr "Загрузить"
+
+#: .\app_users\tests\test_upload_avatar.py:74 .\app_users\views.py:94
+msgid "Specify the correct file"
+msgstr "Укажите корректный файл"
+
+#: .\app_users\tests\tests_edit_account.py:56 .\app_users\views.py:72
+msgid "Changes saved!"
+msgstr "Изменения сохранены!"
+
+#: .\app_users\tests\tests_edit_account.py:84 .\app_users\views.py:74
+msgid "Please enter correct data"
+msgstr "Пожалуйста введите корректные данные"
+
+#~ msgid "Edit contact information"
+#~ msgstr "Редактировать контактные данные"

@@ -1,0 +1,121 @@
+html{
+    background-color: #f1f1f1;
+}
+
+.container{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.header-lang-choice{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.page-link{
+    margin-top: 20px;
+    color: brown;
+    text-decoration: none;
+}
+
+.page-link:hover{
+    color: rgb(94, 21, 21);
+}
+
+.btn{
+    padding: 5px 10px;
+    background-color: brown;
+    color: yellow;
+    border-radius: 5px;
+}
+
+.register-form, .upload-avatar-form{
+    margin-bottom: 20px;
+}
+
+.header{
+    background-color: brown;
+    height: 70px;
+    border-radius: 15px;   
+}
+
+.header-list{
+    height: inherit;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__link{
+    text-decoration: none;
+    color: cornsilk;
+}
+
+.header__link:hover{
+    color:yellow;
+}
+
+.header__welcome{
+    color:rgb(163, 226, 38);
+}
+
+.post-list{
+    margin: 0 -10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-card{
+    position: relative;
+    padding: 5px;
+    padding-bottom: 15px;
+    flex: 1 1 30%;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.post-card:hover{
+    background-color: rgb(170, 142, 142);
+    cursor: pointer;
+}
+
+.post-card__header{
+    margin: 5px 0px 30px 0px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.post-card__date{
+    position:absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 10px;
+}
+
+.post-card__author{
+    position:absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.avatar-image{
+    max-width: 120px;
+}
+
+.post-image{
+    max-width: 200px;
+}
